@@ -84,7 +84,7 @@
       </div>
     </div>
 <div class="image">
-    <img draggable="false" class="tilt" src="hero.jpg" alt="">
+    <img draggable="false" class="tilt" src="bishaldahal20.jpg" alt="">
 </div>
 </section>
 <!-- hero section ends -->
@@ -111,7 +111,7 @@
           I love to create seamless and efficient Full-Stack applications and explore new tech stacks </p>
         
         <div class="box-container">
-            <div class="box">
+<p><span>Age: </span><span id="age"></span></p>
               <p><span> age: </span> 21</p>
               <p><span> phone : </span> +977 9840684777</p>
             </div>
@@ -442,6 +442,21 @@
 <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
 
 <script src="script.js"></script>
+<script>
+  function calculateAge(birthdate) {
+    let birthDate = new Date(birthdate);
+    let today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    let monthDiff = today.getMonth() - birthDate.getMonth();
+    
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+    }
+    
+    return age;
+  }
 
+  document.getElementById("age").textContent = calculateAge("2003-12-09"); // Replace with actual birthdate
+</script>
 </body>
 </html>
