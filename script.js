@@ -74,6 +74,7 @@ document.addEventListener("visibilitychange", function () {
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
   strings: [
+    "Backend Developer",
     "Android App Development",
     "Web Development",
     "web App Development",
